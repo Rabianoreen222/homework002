@@ -1,10 +1,15 @@
-import Book from "./class.js";
-const firstBook = new Book("12th Dec, 2020", 19, "3rd", "Rabia", "My Book", 22);
+const additionFucntion = (firstVar, secondVar) => {
+  return firstVar + secondVar;
+};
 
-console.log(firstBook);
-console.log(firstBook.expensive());
-console.log(firstBook.priceUpdates("111"));
-console.log(firstBook.expensive());
-console.log(firstBook.stockUpdates(10));
+const addition = document.getElementById("addition");
+let output = document.getElementById("output");
 
-document.getElementById("oldStock").innerHTML = firstBook.stock;
+addition.onclick = () => {
+  const firstVarInput = document.getElementById("firstVarInput").value;
+  const secondVarInput = document.getElementById("secondVarInput").value;
+  output.innerHTML = additionFucntion(
+    parseInt(firstVarInput),
+    parseInt(secondVarInput)
+  );
+};
