@@ -1,21 +1,26 @@
-function multiply(firstVar, secondVar)=> {
+const multiply = (firstVar = 1, secondVar = 3) => {
   return firstVar * secondVar;
-}
-var firstvariable = `firstinputVar`;
-document.getElementById(firstinputVar).innerHTM=firstvariable;
-var secondvariable = `secondinputVar`;
-document.getElementById(secondinputVar).innerHTM=secondvariable;
-/* var secondvariable = { secondVar };
-let output = {multiply()}
-document.getElementById("firstVar").innerHTML=; */
+};
 
-parseInt("1stvariable");
-parseInt("2ndvariable");
-document.getElementById("funcMultiply").onclick = multiply()};
- document.getElementById("funcMultiply").innerHTML = "multiply()";
-}
+let buy = document.getElementById("buy");
+let dataLayer = (window.dataLayer = window.dataLayer || []);
 
+buy.onclick = () => {
+  let price = document.getElementById("pirce").innerHTML;
+  let name = document.getElementById("name").innerHTML;
+  let qunatity = document.getElementById("qunatity").innerHTML;
 
-var random=``;
-document.getElementsByTagName("h2")[0].innerHTML=random;
-
+  dataLayer.push({ ecommerce: null }); // Clear the previous ecommerce object.
+  dataLayer.push({
+    event: "add_to_cart",
+    ecommerce: {
+      items: [
+        {
+          item_name: name,
+          price: price,
+          quantity: qunatity,
+        },
+      ],
+    },
+  });
+};
